@@ -8,14 +8,28 @@
 <body>
     <h1>Javascript Conditional Statements</h1>
     <!--comment-->
+    <input type="text" id="Age" class="form-control" placeholder="tpe here...">
+
+    <button class="btn btn-info" onclick="checkAge()">Check</button>
+
 
     <script>
-        if(19 < 18){
+        function checkAge(){
+            var age = document.getElementById("Age").value;
+        if(isNaN(age) || age < 0){
+            alert("Please input a valid number")
+
+        }
+        else if(age < 18){
              alert("You are underage.");
+        }
+        else if(age> 18){
+            alert("You are of legal age.");
         }
         else{
             alert("PLease indicate your age");
         }
+    }
     </script>
 </body>
 </html> 
